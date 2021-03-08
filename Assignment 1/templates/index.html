@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 1</title>
+</head>
+<center>
+<body>
+
+    <h2> By Varshin Thatiparthi</h2>
+    <h2> 1001722318 </h2>
+
+    <br>
+
+
+    <h3> Upload Data </h3>
+
+        <form action = "./upload" method="POST" enctype="multipart/form-data">
+            <input type="file" id="file" name="file">
+            <input type="submit" value="upload">
+
+        </form>
+    <br>
+
+    <h3> 2. Load Database </h3>
+
+        <form action = "./loadPeople" method="GET" enctype="multipart/form-data">
+            <input type="submit" value="Load Data">
+
+        </form>
+    <br>
+    <h3>Query for Picture !!</h3>
+	<form action="./selectQueryByName" method="POST" enctype="multipart/form-data">
+	      <input type="text" value="" name="firstname"  placeholder="name">
+	      <input type="submit" value="Search">
+    	</form>
+
+    <h3>Display for Picture less than 99000!!</h3>
+	<form action="./searchPictures" method="GET" enctype="multipart/form-data">
+	      <input type="submit" value="Search">
+    	</form>
+<!--     <h3>View Table</h3>-->
+<!--	<form action="{{ url_for('viewTable') }}" method="GET" enctype="multipart/form-data">-->
+
+<!--	      <input type="submit" value="Search">-->
+<!--    	</form>-->
+
+    <h3> Update </h3>
+    <form method="POST" action="{{ url_for('update') }}" enctype=multipart/form-data >
+        <label for="column">Choose a coumn:</label>
+         <select name="column" id="column">
+      <option value="state">State</option>
+      <option value="salary">Salary</option>
+             <option value="picture">Picture</option>
+      <option value="keywords">Keywords</option>
+      <option value="grade">grade</option>
+  </select>
+         Input Name <input type = "text" name = "nam" />
+         Input New Value <input type = "text" name = "desc" />
+         <input type = "submit" name = "Update"/>
+      </form>
+
+    <h3>Delete a record</h3>
+	<form action="{{ url_for('deleterecord') }}" method="POST" enctype="multipart/form-data">
+	      <input type="text" value="name" name="dname"  placeholder="name">
+	      <input type="submit" value="Search">
+    	</form>
+
+
+
+
+<!--    <p> Hello  World! </p>-->
+<!--    {% for _ in range(0,10) %}-->
+<!--        <p> Hey</p>-->
+<!--    {% endfor %}-->
+</body>
+    </center>
+</html>
