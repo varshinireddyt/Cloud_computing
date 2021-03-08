@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}{% endblock %} People</title>
+    {% endblock %}
+</head>
+<body>
+<header>
+<b>
+Varshini Thatiparthi - 1001722318
+</b>
+</header>
+<p>
+{% block content %}
+{% for city in ci %}
+ 
+  <!-- This retrives all the data based on the content typed in textbox of index.html -->
+  <p>The mag is <b>({{city["mag"]}})</b> the time is <b> ({{city["time"]}}) </b>.
+
+{% endfor %}
+{% endblock %}
+</p>
+</body>
+</html>

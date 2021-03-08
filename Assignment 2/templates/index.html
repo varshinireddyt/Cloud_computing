@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}{% endblock %}  Home</title>
+    {% endblock %}
+</head>
+<body>
+<header>
+<b>
+Varshini Thatiparthi - 1001722318
+</b>
+</header>
+
+<p>
+
+    <br>
+
+
+    <h3> Upload Data </h3>
+
+        <form action = "./upload" method="POST" enctype="multipart/form-data">
+            <input type="file" id="file" name="file">
+            <input type="submit" value="upload">
+
+        </form>
+    <br>
+         <h3> 2. Load Database </h3>
+
+        <form action = "./loadPeople" method="GET" enctype="multipart/form-data">
+            <input type="submit" value="Load Data">
+
+        </form>
+
+
+ <form action="/countearthgt5" method="POST">
+   <input type="submit" value=" count all earthquakes that occurred with a magnitude greater
+ than 5.0"><br/><br/>
+</form>
+</p>
+<p>
+<form action="/searchforearth" method="POST" enctype="multipart/form-data">
+	Magnitude Range from<input type="text" value="" name="rangefrom" maxlength="200" width="60"> <br/>
+  Magnitude Range To<input type="text" value="" name="rangeto" maxlength="200" width="60"><br/>
+<input type="submit" value="Search for 2.0 to 2.5, 2.5 to 3.0… for a week a day or the whole 30 days"><br/><br/>
+</form>
+</p>
+<p>
+<form action="/earthnearloc" method="POST">
+Latitude<input type="text" name="lat" maxlength="200" width="60"></br>
+	Longitude<input type="text" name="long" maxlength="200" width="60"></br>
+Radius<input type="text" name="radius" maxlength="200" width="60"></br>
+	<input type="submit" value="Earthquakes that were near above location"><br/><br/>
+	</form>
+</p>
+<p>
+<form action="/countnightgt4" method="post">
+<input type="submit" value=" count all earthquakes that occurred at night with a magnitude greater 
+than 4.0">
+</form> 
+</p>
+</body>
+</html>

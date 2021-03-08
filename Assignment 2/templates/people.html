@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}{% endblock %} People</title>
+    {% endblock %}
+</head>
+<body>
+<header>
+<b>
+Varshini Thatiparthi - 1001722318
+</b>
+</header>
+<p>
+{% block content %}
+
+{% for city in ci %}
+  <p>The details <b>({{city[0]}})</b> the gap is <b>({{city[7]}})</b> the location is <b>({{city[20]}})</b> the magnitude type is <b>({{city[5]}})</b> the place is  <b>({{city[13]}})</b> .
+
+{% endfor %}
+{% endblock %}
+</p>
+</body>
+</html>
