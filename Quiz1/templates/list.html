@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+   <body>
+
+   <center>
+      <header> <h1>Varshini Thatiparthi </h1> </header>
+      </header>
+      <br> <br>
+      <table border = 1>
+         {% print(rows) %}
+         {% for row in rows %}
+         <tr>
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+            <td> {{ row[2]}}</td>
+            <td>{{row[3]}}</td>
+            <td> {{ row[4]}}</td>
+            <td>{{row[5]}}</td>
+             {% print(row) %}
+            <td> <img src="{{rows[row]}}" height="200" width="200"></td>
+            <!-- <td>{{row['Keywords']}}</td> -->
+         </tr>
+         {% endfor %}
+      </table>
+
+      <br>
+
+   </body>
+</html>

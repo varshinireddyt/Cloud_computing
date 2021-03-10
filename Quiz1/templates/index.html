@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz 1</title>
+</head>
+<center>
+<body>
+
+    <h2> By Varshini Thatiparthi</h2>
+    <h2> 1001722318 </h2>
+    <img src="myfiles/mars.jpg">
+
+    <br>
+
+
+    <h3> Upload Data </h3>
+
+        <form action = "./upload" method="POST" enctype="multipart/form-data">
+            <input type="file" id="file" name="file">
+            <input type="submit" value="upload">
+
+        </form>
+    <br>
+
+<!--    <h3> 2. Load Database </h3>-->
+
+<!--        <form action = "./loadPeople" method="GET" enctype="multipart/form-data">-->
+<!--            <input type="submit" value="Load Data">-->
+
+<!--        </form>-->
+    <br>
+    <h3>Query for distance range !!</h3>
+	<form action="./selectQueryByRange" method="POST" enctype="multipart/form-data">
+	      Min value <input type="text" value="" name="min1"  placeholder="name">
+	      Max value <input type="text" value="" name="max1"  placeholder="name">
+        <input type="submit" value="Search">
+    	</form>
+
+
+
+
+    <h3>Display all with nsize range</h3>
+	<form action="{{ url_for('searchNsize') }}" method="POST" enctype="multipart/form-data">
+       Author <input type="text" value="" name="authorName"  placeholder="name">
+          Min value <input type="text" value="" name="minOne"  placeholder="name">
+	      Max value <input type="text" value="" name="maxOne"  placeholder="name">
+	      <input type="submit" value="Search">
+    	</form>
+
+    <h3> Update / Modify</h3>
+    <form method="POST" action="{{ url_for('update') }}" enctype=multipart/form-data >
+        <label for="column">Choose a coumn:</label>
+         <select name="column" id="column">
+      <option value="author">Author</option>
+      <option value="distance">Distance</option>
+             <option value="picture">Picture</option>
+      <option value="keywords">Keywords</option>
+      <option value="nsize">Nsize</option>
+  </select>
+         Input Name <input type = "text" name = "nam" />
+         Input New Value <input type = "text" name = "desc" />
+         <input type = "submit" name = "Update"/>
+      </form>
+
+
+
+
+
+<!--    <p> Hello  World! </p>-->
+<!--    {% for _ in range(0,10) %}-->
+<!--        <p> Hey</p>-->
+<!--    {% endfor %}-->
+</body>
+    </center>
+</html>
