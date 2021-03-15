@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}{% endblock %}  Home</title>
+    {% endblock %}
+</head>
+<body>
+<header>
+<b>
+Varshini Thatiparthi - 1001722318
+Assignment 3
+</b>
+</header>
+
+<p>
+
+    <br>
+
+
+    <h3> Upload Data </h3>
+
+        <form action = "./upload" method="POST" enctype="multipart/form-data">
+            <input type="file" id="file" name="file">
+            <input type="submit" value="upload">
+
+        </form>
+    <br>
+       <h3> 2. Load Database </h3>
+
+        <form action = "./loadPeople" method="GET" enctype="multipart/form-data">
+            <input type="submit" value="Load Data">
+
+        </form>
+
+
+ <form action="/displaydata" method="POST">
+   Magnitude Range from<input type="text" name="rangefrom1" maxlength="200" width="60"> <br/>
+ 	Magnitude Range To<input type="text" name="rangeto1" maxlength="200" width="60"><br/>
+	Number of queries to run:<input type="text" name="nom1" maxlength="200" width="60"></br>
+   <input type="submit" value="query without cache"><br/><br/>
+</form>
+ <form action="/multiplerun" method="POST">
+	Magnitude Range from<input type="text" name="rangefrom" maxlength="200" width="60"> <br/>
+ 	Magnitude Range To<input type="text" name="rangeto" maxlength="200" width="60"><br/>
+	Number of queries to run:<input type="text" name="nom" maxlength="200" width="60"></br>
+   <input type="submit" value="query with cache"><br/><br/>
+</form>
+
+</p>
+</body>
+</html>
