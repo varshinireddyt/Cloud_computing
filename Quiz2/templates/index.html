@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}{% endblock %}  Home</title>
+    {% endblock %}
+</head>
+<body>
+<header>
+<b>
+Varshini Thatiparthi - 1001722318
+Quiz 2
+</b>
+</header>
+
+<p>
+
+    <br>
+
+
+    <h3> Upload Data </h3>
+
+        <form action = "./upload" method="POST" enctype="multipart/form-data">
+            <input type="file" id="file" name="file">
+            <input type="submit" value="upload">
+
+        </form>
+    <br>
+      
+
+
+ <h3> 2. Load Database </h3>
+
+       <form action = "./loadPeople" method="GET" enctype="multipart/form-data">
+           <input type="submit" value="Load Data">
+
+       </form>
+ <form action="/displaydata" method="POST">
+   Year <input type="text" name="year1" maxlength="200" width="60"> <br/>
+	State Abbreviation<input type="text" name="state1" maxlength="200" width="60"></br>
+   <input type="submit" value="submit"><br/><br/>
+</form>
+
+ <form action="/candname" method="POST">
+  candidate <input type="text" name="cand" maxlength="200" width="60"> <br/>
+	
+   <input type="submit" value="submit"><br/><br/>
+</form>
+
+<form action="/rangedata" method="POST">
+min vote <input type="text" name="minvote" maxlength="200" width="60"> <br/>
+	max vote<input type="text" name="maxvote" maxlength="200" width="60"></br>
+    min year <input type="text" name="minyear" maxlength="200" width="60"> <br/>
+	max year<input type="text" name="maxyear" maxlength="200" width="60"></br>
+   <input type="submit" value="submit"><br/><br/>
+</form>
+<form action="/rangedatatime" method="POST">
+min vote <input type="text" name="minvote" maxlength="200" width="60"> <br/>
+	max vote<input type="text" name="maxvote" maxlength="200" width="60"></br>
+    min year <input type="text" name="minyear" maxlength="200" width="60"> <br/>
+	max year<input type="text" name="maxyear" maxlength="200" width="60"></br>
+    number of queries <input type="text" name="num1" maxlength="200" width="60"></br>
+   <input type="submit" value="without cache"><br/><br/>
+</form>
+<form action="/rangedatatimecache" method="POST">
+min vote <input type="text" name="minvote" maxlength="200" width="60"> <br/>
+	max vote<input type="text" name="maxvote" maxlength="200" width="60"></br>
+    min year <input type="text" name="minyear" maxlength="200" width="60"> <br/>
+	max year<input type="text" name="maxyear" maxlength="200" width="60"></br>
+    number of queries <input type="text" name="num1" maxlength="200" width="60"></br>
+   <input type="submit" value="with cache"><br/><br/>
+</form>
+ 
+
+</p>
+</body>
+</html>
