@@ -84,14 +84,8 @@ ALLOWED_EXTENSIONS = set(['jpg', 'csv'])
 CSV_ALLOWED_EXTENSIONS = set(['csv'])
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-
-server = 'myazureserver6331.database.windows.net'
-database = 'varshiniCSE6331'
-username = 'azureuser'
-password = 'Varshini_4'
-driver = '{ODBC Driver 13 for SQL Server}'
 #driver = '/usr/local/lib/libmsodbcsql.13.dylib'
-cnxn = pyodbc.connect('driver={ODBC Driver 17 for SQL Server};Server=tcp:myazureserver6331.database.windows.net,1433;Database=varshiniCSE6331;Uid=azureuser;Pwd=Varshini_4;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;')
+cnxn = pyodbc.connect('DRIVER='+driver+';PORT=1433;SERVER='+server+';PORT=1443;DATABASE='+database+';UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()
 print('Connected...')
 
