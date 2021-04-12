@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+</head>
+<body>
+        <table border="2px">
+		        <tr><td>NAME</td><td>Image</td></tr>
+                {% if img_url_with_sas_token %}
+                <tr>
+                        <td>{{filename}}</td>
+                        {% print("filename:" + img_url_with_sas_token) %}
+                        <td><img src="{{img_url_with_sas_token}}" height="200" width="200"></td>
+                </tr>{% endif %}
+        </table>
+</body>
+</html>

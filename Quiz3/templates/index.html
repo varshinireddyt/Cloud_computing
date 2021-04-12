@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}{% endblock %}  Home</title>
+    {% endblock %}
+</head>
+<body>
+<header>
+<b>
+Varshini Thatiparthi - 1001722318
+</b>
+</header>
+
+<p>
+
+    <br>
+
+
+    <h3> Upload Data </h3>
+
+        <form action = "./upload" method="POST" enctype="multipart/form-data">
+            <input type="file" id="file" name="file">
+            <input type="submit" value="upload">
+
+        </form>
+    <br>
+
+  
+
+        <form action="/pie" method="POST">
+   Year <input type="text" name="year1" maxlength="200" width="60"> <br/>
+	State Abbreviation<input type="text" name="state1" maxlength="200" width="60"></br>
+   <input type="submit" value="pie chart"><br/><br/>
+</form>
+    
+
+ <form action="/barchart" method="POST">
+ min year <input type="text" name="minyear" maxlength="200" width="60"> <br/>
+	max year<input type="text" name="maxyear" maxlength="200" width="60"></br>
+    State Abbreviation<input type="text" name="state2" maxlength="200" width="60"></br>
+	<input type="submit" value="bar chart"><br/><br/>
+</form>
+<form action="/scatter" method="POST">
+ min year <input type="text" name="minyear" maxlength="200" width="60"> <br/>
+	max year<input type="text" name="maxyear" maxlength="200" width="60"></br>
+    State Abbreviation<input type="text" name="state2" maxlength="200" width="60"></br>
+	<input type="submit" value="scatter chart"><br/><br/>
+</form>
+</p>
+</body>
+</html>

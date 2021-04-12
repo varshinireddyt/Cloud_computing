@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}{% endblock %}  Home</title>
+    {% endblock %}
+</head>
+<body>
+<header>
+<b>
+Varshini Thatiparthi - 1001722318
+Quiz 3.99(Bonuss)
+</b>
+</header>
+
+<p>
+
+    <br>
+
+
+    <h3> Upload Data </h3>
+
+        <form action = "./upload" method="POST" enctype="multipart/form-data">
+            <input type="file" id="file" name="file">
+            <input type="submit" value="upload">
+
+        </form>
+    <br>
+      
+
+
+
+
+ <form action="/candname" method="POST">
+    min year <input type="text" name="minyear" maxlength="200" width="60"> <br/>
+	max year<input type="text" name="maxyear" maxlength="200" width="60"></br>
+  candidate <input type="text" name="cand" maxlength="200" width="60"> <br/>
+	
+   <input type="submit" value="submit">
+     <br/><br/>
+     <h4>Count total votes and time</h4> </form>
+
+<form action="/candnametime" method="POST">
+    min year <input type="text" name="minyear1" maxlength="200" width="60"> <br/>
+	max year<input type="text" name="maxyear1" maxlength="200" width="60"></br>
+  candidate <input type="text" name="cand1" maxlength="200" width="60"> <br/>
+
+   <input type="submit" value="submit2"><br/><br/>
+</form>
+
+
+
+</form>
+ 
+
+</p>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}{% endblock %} People</title>
+    {% endblock %}
+</head>
+<body>
+<header>
+<b>
+    Varshini Thatiparthi - 1001722318
+</b>
+</header>
+<p>
+
+{% block content %}
+<h1>Earthquakes greater than magnitude 5.0</h1>
+  <p>Count:<b>{{ci[0][0]}}</b> </p>
+{% endblock %}
+</p>
+</body>
+</html>
