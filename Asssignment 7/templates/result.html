@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}{% endblock %} People</title>
+    {% endblock %}
+</head>
+<body>
+<header>
+<b>
+Varshini Thatiparthi - 1001722318
+</b>
+</header>
+<p>
+{% block content %}
+    {% for file in filename %}
+
+  <p>Relevant documents are  <b>{{file}}</b>  <b> </b>.
+
+{% endfor %}
+
+{% for l in line %}
+
+  <p>Searched words are  <b>{{l}}</b>  <b> </b>.
+
+{% endfor %}
+{% endblock %}
+</p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}{% endblock %} People</title>
+    {% endblock %}
+</head>
+<body>
+<header>
+<b>
+Varshini Thatiparthi - 1001722318
+</b>
+</header>
+<p>
+{% block content %}
+
+
+{% for k,val in count.items() %}
+
+  <p>file name :   <b>{{k}}</b> Count number:  <b> {{val}}</b>.
+
+{% endfor %}
+
+{% endblock %}
+</p>
+</body>
+</html>

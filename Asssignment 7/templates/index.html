@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}{% endblock %}  Home</title>
+    {% endblock %}
+</head>
+<body>
+<header>
+<b>
+Varshini Thatiparthi - 1001722318
+</b>
+</header>
+
+<p>
+
+
+ <form action="/allcount" method="POST">
+     Question 10:
+	all files count
+    <input type="submit" value="search">
+</form>
+    <br>
+ <form action="/viewstopwords" method="POST">
+     Question 11:
+	View after removing stopwords
+    <input type="submit" value="search">
+</form>
+
+
+ <form action="/wordcount" method="POST">
+     Question 12:
+
+	Search input word <input type="text" name="word1"><br/><br/>
+     input filename <input type="text" name="file1"><br/><br/>
+    <input type="submit" value="search">
+</form>
+
+ <form action="/searchlines" method="POST">
+     Question 13:
+	Search input word <input type="text" name="word2"><br/><br/>
+     input number of lines <input type="text" name="num"><br/><br/>
+    <input type="submit" value="search">
+</form>
+
+ <form action="/search" method="POST">
+     Search a word or combination
+	Search <input type="text" name="find"><br/><br/>
+    <input type="submit" value="search">
+</form>
+
+</p>
+</body>
+</html>
